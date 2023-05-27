@@ -4,7 +4,7 @@ var mongo= require('mongodb').MongoClient;
 const bcryptjs = require('bcryptjs');
 var ObjectId=require('mongodb').ObjectID;
 var assert=require('assert');
-var url="mongodb+srv://CUET_INSIGHTS:cuetcse@cuetdb.96uu1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+var url="mongodb+srv://CUET_INSIGHTS:cuetcse@cuetdb.96uu1dgfdg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 const router = express.Router();
 const authController = require('../controllers/authController')
