@@ -4,8 +4,8 @@ const nodemailer = require('nodemailer');
 const { google } = require("googleapis");
 const OAuth2 = google.auth.OAuth2;
 const jwt = require('jsonwebtoken');
-const JWT_KEY = "jwtactive987gddyqufjygGDGGYGuyg";
-const JWT_RESET_KEY = "jwtreset987gigugUGUYGIhihihiYIGIG";
+const JWT_KEY = "your JWT_KEY";
+const JWT_RESET_KEY = "your JWT_RESET_KEY";
 const User = require('../models/User');
 exports.registerHandle = (req, res) => {
     const { name, email, password, password2 } = req.body;
@@ -43,13 +43,13 @@ exports.registerHandle = (req, res) => {
             } else {
 
                 const oauth2Client = new OAuth2(
-                    "634642279327-bmeq3idjicpokk8un4ls8jdujmkiok3c.apps.googleusercontent.com", // ClientID
-                    "PV1p45gmhmXyIJlCYwGbayoj", // Client Secret
+                    "634642279327-bmegwhgwhgqfhq3idjicpokk8un4ls8jdujmkiok3c.apps.googleusercontent.com", // ClientID
+                    "PV1p45gmhmXyAAGSHAGIJlCYwGbayoj", // Client Secret
                     "https://developers.google.com/oauthplayground" // Redirect URL
                 );
 
                 oauth2Client.setCredentials({
-                    refresh_token: "1//04f6jdCX-cOBlCgYIARAAGAQSNwF-L9IrYsDPzhh3zte86CzSw1RbBKRtZvFJJlVmTRRMgMKG14XGwec1N97ztgeGknpOHk48hTo"
+                    refresh_token: "1//04f6jdCX-cOBlCgYIAGFGAFAARAAGAQSNwF-L9IrYsDPzhh3zte86CzSw1RbBKRtZvFJJlVmTRRMgMKG14XGwec1N97ztgeGknpOHk48hTo"
                 });
                 const accessToken = oauth2Client.getAccessToken()
 
@@ -66,17 +66,17 @@ exports.registerHandle = (req, res) => {
                     service: 'gmail',
                     auth: {
                         type: "OAuth2",
-                        user: "u1704014@student.cuet.ac.bd",
-                        clientId: "634642279327-bmeq3idjicpokk8un4ls8jdujmkiok3c.apps.googleusercontent.com",
-                        clientSecret: "PV1p45gmhmXyIJlCYwGbayoj",
-                        refreshToken: "1//04f6jdCX-cOBlCgYIARAAGAQSNwF-L9IrYsDPzhh3zte86CzSw1RbBKRtZvFJJlVmTRRMgMKG14XGwec1N97ztgeGknpOHk48hTo",
+                        user: "u1798217@gmail.com",
+                        clientId: "634642279327-bmeq3idjicahgshgpokk8un4ls8jdujmkiok3c.apps.googleusercontent.com",
+                        clientSecret: "PV1p45gmhmXashgsyIJlCYwGbayoj",
+                        refreshToken: "1//04f6jdCX-cOBlCgYIARKJKJAAGAQSNwF-L9IrYsDPzhh3zte86CzSw1RbBKRtZvFJJlVmTRRMgMKG14XGwec1N97ztgeGknpOHk48hTo",
                         accessToken: accessToken
                     },
                 });
 
                 
                 const mailOptions = {
-                    from: '"CUET INSIGHTS" <u1704014@student.cuet.ac.bd>', 
+                    from: '"CUET INSIGHTS" <u13637263@gmail.com>', 
                     to: email, 
                     subject: "Account Verification: CUET INSIGHTS ✔", 
                     generateTextFromHTML: true,
@@ -190,13 +190,13 @@ exports.forgotPassword = (req, res) => {
             } else {
 
                 const oauth2Client = new OAuth2(
-                    "634642279327-bmeq3idjicpokk8un4ls8jdujmkiok3c.apps.googleusercontent.com", // ClientID
-                    "PV1p45gmhmXyIJlCYwGbayoj", // Client Secret
+                    "634642279327-bmeq3idjicpokvghgfhfhkng8un4ls8jdujmkiok3c.apps.googleusercontent.com", // ClientID
+                    "PV1p45gmhmXyIJlCYccbcwGbayoj", // Client Secret
                     "https://developers.google.com/oauthplayground" // Redirect URL
                 );
 
                 oauth2Client.setCredentials({
-                    refresh_token: "1//04f6jdCX-cOBlCgYIARAAGAQSNwF-L9IrYsDPzhh3zte86CzSw1RbBKRtZvFJJlVmTRRMgMKG14XGwec1N97ztgeGknpOHk48hTo"
+                    refresh_token: "1//04f6jdCX-cOBlCgYIARGHGHAAGAQSGHGHGNwF-L9IrYsDPzhh3zte86CzSw1RbBKRtZvFJJlVmTRRMgMKG14XGwec1N97ztgeGknpOHk48hTo"
                 });
                 const accessToken = oauth2Client.getAccessToken()
 
@@ -222,16 +222,16 @@ exports.forgotPassword = (req, res) => {
                             auth: {
                                 type: "OAuth2",
                                 user: "u1704014@student.cuet.ac.bd",
-                                clientId: "634642279327-bmeq3idjicpokk8un4ls8jdujmkiok3c.apps.googleusercontent.com",
-                                clientSecret: "PV1p45gmhmXyIJlCYwGbayoj",
-                                refreshToken: "1//04f6jdCX-cOBlCgYIARAAGAQSNwF-L9IrYsDPzhh3zte86CzSw1RbBKRtZvFJJlVmTRRMgMKG14XGwec1N97ztgeGknpOHk48hTo",
+                                clientId: "634642279327-bmeq3idjibhhgcpokk8un4ls8jdujmkiok3c.apps.googleusercontent.com",
+                                clientSecret: "PV1p45gmhmXhghfdgdsdyIJlCYwGbayoj",
+                                refreshToken: "1//04f6jdCX-cOBlCgYIARFHDFDSFDSHGGHFFAAGAQSNwF-L9IrYsDPzhh3zte86gfgfhgfh7363563CzSw1RbBKRtZvFJJlVmTRRMgMKG14XGwec1N97ztgeGknpOHk48hTo",
                                 accessToken: accessToken
                             },
                         });
 
                         
                         const mailOptions = {
-                            from: '"CUET INSIGHTS" <u1704014@student.cuet.ac.bd>', 
+                            from: '"CUET INSIGHTS" <u26572653@gmail.com>', 
                             to: email, 
                             subject: "Account Password Reset: CUET INSIGHTS ✔", 
                             html: output, 
